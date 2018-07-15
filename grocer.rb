@@ -36,7 +36,7 @@ def apply_coupons(cart, coupons)
  final
 end
 
-def apply_clearance(cart:[])
+def apply_clearance(cart)
   # code here
   final = {}
     cart.each do |k,v|
