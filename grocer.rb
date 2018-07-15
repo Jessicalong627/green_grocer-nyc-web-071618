@@ -1,5 +1,6 @@
 def consolidate_cart(cart)
   # code here
+  cart= []
   final = {}
   temp = []
     cart.each do |x|
