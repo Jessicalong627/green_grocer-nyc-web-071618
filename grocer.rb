@@ -16,13 +16,12 @@ end
 def apply_coupons(cart, coupons)
   couponed_cart = cart.clone
 
-    # find couponed item
+   
     cart.each do |item_name, item_data|
       coupons.each do |coupon|
         if coupon[:item] == item_name && item_data[:count] - coupon[:num] >= 0
-          couponed_cart[item_name][:count] -= coupon[:num] # subtract quantity indicated on coupon
+          couponed_cart[item_name][:count] -= coupon[:num] 
 
-          # add discounted rate to consolidated cart line
           if !couponed_cart.include?("#{item_name} W/COUPON")
             couponed_cart["#{item_name} W/COUPON"] = Hash.new
             couponed_cart["#{item_name} W/COUPON"][:price] = coupon[:cost]
