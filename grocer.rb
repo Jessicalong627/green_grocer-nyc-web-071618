@@ -16,7 +16,7 @@ def consolidate_cart(cart)
     final
 end
 
-def apply_coupons(cart:[], coupons:[])
+def apply_coupons(cart, coupons)
   # code here
   final = cart.clone
   temp = ""
